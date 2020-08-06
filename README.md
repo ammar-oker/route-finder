@@ -1,5 +1,17 @@
 # route-finder
 
+#[DEMO](https://cli.vuejs.org/config/)
+
+## Docker Pull Command
+```
+docker pull ammaroker/route-finder
+```
+
+### Run production build with Docker
+```
+docker run -d -p 8080:8080 ammaroker/route-finder
+```
+
 ## Project setup
 ```
 npm install
@@ -19,6 +31,7 @@ npm run build
 ```
 npm run lint
 ```
+
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

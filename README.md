@@ -1,6 +1,6 @@
 # route-finder
 
-# [DEMO](https://route-finder-demo.herokuapp.com/)
+# [DEMO](https://cli.vuejs.org/config/)
 
 ## Docker Pull Command
 ```

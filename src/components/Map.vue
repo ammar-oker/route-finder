@@ -45,7 +45,7 @@
           <v-toolbar-title>Passengers array</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-toolbar-items>
-            <v-btn text @click="passengers = []">Clear</v-btn>
+            <v-btn text @click="json = []">Clear</v-btn>
           </v-toolbar-items>
           <v-toolbar-items>
             <v-btn text @click="resetTextarea">Default</v-btn>

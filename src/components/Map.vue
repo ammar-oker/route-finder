@@ -170,6 +170,7 @@ export default {
     errorDialog: false,
     warningDialog: false,
     syntaxError: false,
+    directionsRenderer: null,
     error: '',
     warning: '',
     step: 0,

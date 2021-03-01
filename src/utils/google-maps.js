@@ -1,6 +1,7 @@
 const API_KEY = 'AIzaSyCpas0rm9fSEUvpsYCqF8R28sqAQqOYXL0'
 const CALLBACK_NAME = 'gmapsCallback'
 const LIBRARIES = 'places'
+const VERSION = 'weekly'
 
 let initialized = !!window.google
 let resolveInitPromise
@@ -21,7 +22,7 @@ export default function init () {
   const script = document.createElement('script')
   script.async = true
   script.defer = true
-  script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=${CALLBACK_NAME}&libraries=${LIBRARIES}`
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=${CALLBACK_NAME}&libraries=${LIBRARIES}&v=${VERSION}`
   script.onerror = rejectInitPromise
   document.querySelector('head').appendChild(script)
 

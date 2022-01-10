@@ -27,6 +27,8 @@
 
 <script>
 export default {
+  name: 'PassengersTable',
+
   data () {
     return {
       search: '',
@@ -41,6 +43,7 @@ export default {
       ]
     }
   },
+
   computed: {
     routeReady () {
       return this.$store.getters.routeReady
@@ -56,6 +59,7 @@ export default {
       return passengers
     }
   },
+
   methods: {
     secondsToHM (d) {
       d = Number(d)

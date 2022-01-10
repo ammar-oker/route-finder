@@ -12,6 +12,7 @@ export default new Vuex.Store({
     originPoint: '',
     destinationPoint: ''
   },
+
   getters: {
     routeReady (state) {
       return state.routeReady
@@ -32,6 +33,7 @@ export default new Vuex.Store({
       return state.destinationPoint
     }
   },
+
   mutations: {
     SET_ROUTE_READY (state, value) {
       state.routeReady = value
@@ -52,6 +54,7 @@ export default new Vuex.Store({
       state.destinationPoint = value
     }
   },
+
   actions: {
     setRouteReady ({ commit }, value) {
       commit('SET_ROUTE_READY', value)

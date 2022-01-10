@@ -1,45 +1,26 @@
 <template>
   <v-app>
-    <Map v-show="activeNav === 'map'"/>
-    <Table v-show="activeNav === 'table'"/>
-    <Details v-show="activeNav === 'details'"/>
-    <v-bottom-navigation
-      v-model="activeNav"
-      grow
-      shift
-      fixed
-      color="primary"
-    >
-      <v-btn value="map" class="nav-btn">
-        <span>Map</span>
-        <v-icon>mdi-map</v-icon>
-      </v-btn>
-
-      <v-btn value="table" class="nav-btn">
-        <span>Table</span>
-        <v-icon>mdi-table</v-icon>
-      </v-btn>
-
-      <v-btn value="details" class="nav-btn">
-        <span>Details</span>
-        <v-icon>mdi-information</v-icon>
-      </v-btn>
-    </v-bottom-navigation>
+    <main-map v-show="activeNav === 'map'"/>
+    <passengers-table v-show="activeNav === 'table'"/>
+    <route-details v-show="activeNav === 'details'"/>
+    <navigation v-model="activeNav"/>
   </v-app>
 </template>
 
 <script>
-import Map from './components/Map'
-import Table from './components/Table'
-import Details from './components/Details'
+import Navigation from './components/Navigation'
+import PassengersTable from './views/PassengersTable'
+import RouteDetails from './views/RouteDetails'
+import MainMap from './views/MainMap'
 
 export default {
   name: 'App',
 
   components: {
-    Details,
-    Table,
-    Map
+    MainMap,
+    RouteDetails,
+    PassengersTable,
+    Navigation
   },
 
   data: () => ({
@@ -52,11 +33,13 @@ export default {
 ::-webkit-scrollbar {
   width: 4px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #0084be;
   border-radius: 10px;
 }
-  .nav-btn {
-    height: 100% !important;
-  }
+
+html {
+  overflow: auto;
+}
 </style>

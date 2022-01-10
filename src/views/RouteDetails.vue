@@ -33,7 +33,8 @@
 
 <script>
 export default {
-  name: 'Details',
+  name: 'RouteDetails',
+
   computed: {
     routeReady () {
       return this.$store.getters.routeReady
@@ -56,6 +57,7 @@ export default {
       return this.secondsToHM(total / passengersCount)
     }
   },
+
   methods: {
     secondsToHM (d) {
       d = Number(d)
